@@ -32,10 +32,15 @@ terraform apply
 
 5. Access the EKS cluster:
 
-Once the Terraform apply is complete, you can access the EKS cluster using the output values provided by Terraform.
+To access the EKS cluster after the Terraform apply is complete, you can use the following command:
 
-- EKS Cluster Name: `<eks_cluster_name>`
-- EKS Cluster Endpoint: `<eks_cluster_endpoint>`
+```shell
+aws eks update-kubeconfig --name [CLUSTER_NAME] --region [CLUSTER_REGION]
+```
+
+Make sure to replace [CLUSTER_NAME] with the actual name of your EKS cluster, and [CLUSTER_REGION] with the appropriate AWS region where the cluster is located.
+
+After running this command, the kubeconfig file on your local machine will be created/updated with the necessary credentials and configuration to access the specified EKS cluster.
 
 6. Clean up
 
