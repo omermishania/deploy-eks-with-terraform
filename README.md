@@ -7,7 +7,7 @@ This project provisions an Amazon EKS (Elastic Kubernetes Service) cluster on AW
 Before running the Terraform configuration, make sure you have the following prerequisites set up:
 
 - AWS CLI: Make sure you have AWS CLI installed and configured with appropriate access keys.
-- Terraform: Install Terraform on your local machine. The version used in this project is <version>.
+- Terraform: Install Terraform on your local machine.
 
 ## Usage
 
